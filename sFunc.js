@@ -29,3 +29,15 @@ function sFunc_string(obj) {
 function sFunc_addListener(obj,listener,capture) {
  obj.addEventListener(obj, listener, capture);
 }
+
+function sFunc_getID(obj) {
+ document.getElementById(obj);
+}
+
+function sFunc_addClass(elem,newclass) {
+ elem.classList.add(newclass);
+}
+
+function sFunc_append(obj) {
+ document.appendChild(obj);
+}
