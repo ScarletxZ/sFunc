@@ -18,11 +18,11 @@ function sFunc_deleteCookie(name) {
   document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
-function sFunc_parseJSON(obj) {
+function sFunc_parse(obj) {
  JSON.parse(obj);
 }
 
-function sFunc_stringJSON(obj) {
+function sFunc_string(obj) {
  JSON.stringify(obj);
 }
 
