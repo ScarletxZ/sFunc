@@ -33,7 +33,7 @@ function $.addListener(obj,listener,capture) {
  obj.addEventListener(obj, listener, capture);
 }
 
-function $.(obj) {
+function $(obj) {
  document.getElementById(obj);
 }
 
