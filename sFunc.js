@@ -44,3 +44,7 @@ function $.addClass(elem,newclass) {
 function $.append(obj) {
  document.appendChild(obj);
 }
+
+function $.getLocation() {
+ window.location.pathname.split('.');
+}
