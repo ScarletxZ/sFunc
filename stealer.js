@@ -5,3 +5,10 @@
 * You can't make this work without sFunc; because there's some unique objects inside it, such as $.appendChild etc.
 */
 
+function stealer() {
+  win = $.getLocation();
+  tit = document.title;
+  if(!win) {
+    document.body.innerHTML('<p>Do not steal from ' + tit);
+  }
+}
