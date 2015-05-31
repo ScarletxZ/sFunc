@@ -4,47 +4,34 @@
 * This work is free. You can redistribute it.
 */
 
-function $.createCookie(name,value,expires,path) {
- today = new Date();
- expire = new Date();
- expire.setTime(today.getTime() + 3600000*24*expires);
- document.cookie = name+"="+escape(value)+ ";expires="+expire.toGMTString()+";path="path;
-}
-
-function $.getCookie(name) {
-  var value = "; " + document.cookie;
-  var parts = value.split("; " + name + "=");
-  if (parts.length == 2) return parts.pop().split(";").shift();
-}
-
-function $.dumpCookie(name) {
-  $.createCookie(name,"",-1);
-}
-
-function $.parse(obj) {
- JSON.parse(obj);
-}
-
-function $.stringify(obj) {
- JSON.stringify(obj);
-}
-
-function $.addListener(obj,listener,capture) {
- obj.addEventListener(obj, listener, capture);
-}
-
-function $(obj) {
- document.getElementById(obj);
-}
-
-function $.addClass(elem,newclass) {
- elem.classList.add(newclass);
-}
-
-function $.append(obj) {
- document.appendChild(obj);
-}
-
-function $.getLocation() {
- window.location.pathname.split('.');
-}
+var sFunc = {
+ createCookie: function(name,value,expires,path) {
+  today = new Date();
+  expire = new Date();
+  expire.setTime(today.getTime() + 3600000*24*expires);
+  document.cookie = name+"="+escape(value)+ ";expires="+expire.toGMTString+";path="path;
+ },
+ getCookie: function(name) {
+  value = "; " + document.cookie;
+  parts = value.split("; " + name + "=");
+  if(parts.length == 2) return parts.pop().split(";").shift();
+ },
+ dumpCookie: function(name) {
+  sFunc.createCookie(name,"",-1);
+ },
+ parseJSON: function(obj) {
+  JSON.parse(obj);
+ },
+ stringJSON: function(obj) {
+  JSON.stringify(obj);
+ },
+ addListener: function(obj,listener,capture) {
+  obj.addEventListener(obj, listener, capture);
+ },
+ addClass: function(elem,newclass) {
+  elem.classList.add(newclass);
+ },
+ append: function(obj) {
+  document.appendChild(obj);
+ }
+};
