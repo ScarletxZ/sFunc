@@ -8,6 +8,12 @@ var defaults = {
  enable:true //set to false to disable sFunc
 }
 
+if(defaults.enable === false) {
+ if(sFunc) {
+  return false;
+ }
+}
+
 var sFunc = {
  createCookie: function(name,value,expires,path) {
   today = new Date();
