@@ -4,6 +4,10 @@
 * This work is free. You can redistribute it.
 */
 
+var defaults = {
+ enable:true //set to false to disable sFunc
+}
+
 var sFunc = {
  createCookie: function(name,value,expires,path) {
   today = new Date();
